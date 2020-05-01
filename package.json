@@ -1,0 +1,29 @@
+{
+  "name": "webdriverio6-mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/fertavora-test-automation/webdriverio6-mocha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/fertavora-test-automation/webdriverio6-mocha/issues"
+  },
+  "homepage": "https://gitlab.com/fertavora-test-automation/webdriverio6-mocha#readme",
+  "dependencies": {
+    "@wdio/cli": "^6.1.5"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^6.1.6",
+    "@wdio/mocha-framework": "^6.1.6",
+    "@wdio/spec-reporter": "^6.1.5",
+    "@wdio/sync": "^6.1.5"
+  }
+}
