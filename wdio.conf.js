@@ -211,8 +211,15 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+        // This is to mark the test as passed or failed on Zalenium dashboard
+        const testResultCookie = {
+            'name': 'zaleniumTestPassed',
+            'value': arguments[2].passed.toString()
+        }
+
+        browser.setCookies(testResultCookie);
+    },
 
 
     /**
