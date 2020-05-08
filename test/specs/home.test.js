@@ -1,4 +1,4 @@
-const { StoreHomePage } = require('../../pageObjects');
+const { StoreHomePage, ContactPage, AboutUsPage, CartPage, LogInPage, SignUpPage } = require('../../pageObjects');
 
 describe('Demoblaze - Home', () => {
 
@@ -33,6 +33,19 @@ describe('Demoblaze - Home', () => {
   });
 
   const navBarLinks = [
-    { label: '', expectedUrl: ''},
+    { label: 'Contact', expectedElements: [ ContactPage.inputContactEmail, ContactPage.buttonSendMessage ] },
+    { label: 'About us', expectedElements: [ AboutUsPage.videoContainer ] },
+    { label: 'Cart', expectedElements: [ CartPage.buttonPlaceOrder ] },
+    { label: 'Log in', expectedElements: [ LogInPage.inputUsername, LogInPage.inputPassword, LogInPage.buttonLogIn ] },
+    { label: 'Sign up', expectedElements: [ SignUpPage.inputUsername, SignUpPage.inputPassword, SignUpPage.buttonSignUp ] },
   ]
+
+  navBarLinks.forEach((linksTest) => {
+    it(`User clicks ${linksTest.label} on navBar and the corresponding page is displayed`, () => {
+      StoreHomePage.clickNavBarLink(linksTest.label);
+      linksTest.expectedElements.forEach((element) => {
+        expect(element()).toBeDisplayed();
+      })
+    });
+  });
 });
