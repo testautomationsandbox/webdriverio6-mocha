@@ -18,7 +18,9 @@
   },
   "homepage": "https://gitlab.com/fertavora-test-automation/webdriverio6-mocha#readme",
   "dependencies": {
-    "@wdio/cli": "^6.1.5"
+    "@wdio/cli": "^6.1.5",
+    "axios": "^0.19.2",
+    "uuid": "^8.0.0"
   },
   "devDependencies": {
     "@wdio/local-runner": "^6.1.6",
