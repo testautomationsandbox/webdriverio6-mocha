@@ -1,7 +1,4 @@
-const { StoreHomePage } = require('../../pageObjects');
-
 describe('Demoblaze - Contact', () =>{
-
   it('User sends a contact message', () => {
     StoreHomePage
       .getPage()

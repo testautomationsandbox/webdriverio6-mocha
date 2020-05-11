@@ -1,7 +1,4 @@
-const { StoreHomePage, ContactPage, AboutUsPage, CartPage, LogInPage, SignUpPage } = require('../../pageObjects');
-
 describe('Demoblaze - Home', () => {
-
   beforeEach(()=> {
     StoreHomePage.getPage();
     expect(StoreHomePage.divNavBar()).toBeDisplayed();

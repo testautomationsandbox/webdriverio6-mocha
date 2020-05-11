@@ -1,3 +1,5 @@
+const pageObjects = require('./pageObjects');
+
 exports.config = {
     //
     // ====================
@@ -182,8 +184,18 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+
+        // Defining page objects as global.
+        // This is to avoid importing page objects on each spec file
+        StoreHomePage = pageObjects.StoreHomePage;
+        ProductDetailPage = pageObjects.ProductDetailPage;
+        ContactPage = pageObjects.ContactPage;
+        AboutUsPage = pageObjects.AboutUsPage;
+        CartPage = pageObjects.CartPage;
+        LogInPage = pageObjects.LogInPage;
+        SignUpPage = pageObjects.SignUpPage;
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name

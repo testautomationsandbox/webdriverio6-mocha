@@ -1,5 +1,3 @@
-const { ContactPage, CartPage, AboutUsPage, LogInPage, SignUpPage } = require('./');
-
 const NavBarPage = {
   divNavBar: () => browser.$('div#navbarExample'),
   clickNavBarLink: (label) => {
