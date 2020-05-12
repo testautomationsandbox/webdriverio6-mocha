@@ -62,10 +62,10 @@ exports.config = {
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
       },
-      {
-        maxInstances: 5,
-        browserName: 'firefox',
-      }
+      // {
+      //   maxInstances: 5,
+      //   browserName: 'firefox',
+      // }
     ],
     //
     // ===================
@@ -195,6 +195,7 @@ exports.config = {
         CartPage = pageObjects.CartPage;
         LogInPage = pageObjects.LogInPage;
         SignUpPage = pageObjects.SignUpPage;
+        PlaceOrderPage = pageObjects.PlaceOrderPage;
     },
     /**
      * Runs before a WebdriverIO command gets executed.
