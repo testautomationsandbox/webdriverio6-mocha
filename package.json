@@ -20,7 +20,8 @@
   "dependencies": {
     "@wdio/cli": "^6.1.5",
     "axios": "^0.19.2",
-    "uuid": "^8.0.0"
+    "uuid": "^8.0.0",
+    "wdio-mochawesome-reporter": "^4.0.0"
   },
   "devDependencies": {
     "@wdio/local-runner": "^6.1.6",

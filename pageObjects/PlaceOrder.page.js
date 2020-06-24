@@ -27,6 +27,7 @@ const PlaceOrderPage = {
    * @returns PlaceOrderPage the Place Order form page object
    */
   fillPlaceOrderForm: ({name, country, city, card, month, year}) => {
+    PlaceOrderPage.inputName().waitForDisplayed();
     PlaceOrderPage.inputName().setValue(name);
     PlaceOrderPage.inputCountry().setValue(country);
     PlaceOrderPage.inputCity().setValue(city);

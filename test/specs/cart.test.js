@@ -3,10 +3,10 @@ describe('Demoblaze - Cart', () => {
     CartPage.getPage();
   });
 
-  it('User can delete a product', () => {
-    CartPage.clickDeleteByIndex(0);
-    expect(CartPage.tableRowsProducts()).not.toBeDisplayed();
-  });
+  // it('User can delete a product', () => {
+  //   CartPage.clickDeleteByIndex(0);
+  //   expect(CartPage.tableRowsProducts()).not.toBeDisplayed();
+  // });
 
   it('User places an order', () => {
     const orderData = {
